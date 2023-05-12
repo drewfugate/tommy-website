@@ -50,4 +50,13 @@
     display: inline-block;
     width: 6%;
     padding-left: 5%;
-}
+    opacity: .8;
+    filter: grayscale(30%);
+    filter: brightness(120%);
+ }
+
+ .socialButtons img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    filter: brightness(170%);
+ }
