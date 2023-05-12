@@ -1,8 +1,9 @@
 import React from "react";
 import headshot from "./images/headshot.png";
 import Header from "./components/header";
+import AboutMe from "./components/AboutMe";
 import "./App.css";
-
+import { animateScroll as scroll, scroller } from "react-scroll";
 
 const albums = [
   {
@@ -37,24 +38,13 @@ const albums = [
   },
 ];
 
-const aboutMe = [
-  {
-    header: "About Me: ",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque molestiae consequuntur eveniet minus eum dolor fugit delectus, illo ducimus blanditiis est in modi exercitationem corrupti recusandae, beatae accusamus qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque molestiae consequuntur eveniet minus eum dolor fugit delectus, illo ducimus blanditiis est in modi exercitationem corrupti recusandae, beatae accusamus qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque molestiae consequuntur eveniet minus eum dolor fugit delectus, illo ducimus blanditiis est in modi exercitationem corrupti recusandae, beatae accusamus qui.",
-    contact: "Contact: tommytomsomething@gmail.com",
-    image: require("./images/portrait.png"),
-  },
-];
-
 function App() {
   return (
-    <div className="App">
+    <div id="Home" className="App">
       <Header />
-
       <header className="App-header"></header>
       <img className="headshot" src={headshot} alt="headshot" />
-      <div className="clickableBackground">
+      <div id="Discography" className="clickableBackground">
         <h4 className="disco">Discography</h4>
       </div>
       <div className="album-grid">
@@ -67,21 +57,7 @@ function App() {
           </div>
         ))}
       </div>
-
-      <div className="aboutMe">
-        {aboutMe.map((about, index) => (
-          <div key={index} className="about">
-            <div className="left">
-              <h4>{about.header}</h4>
-              <p>{about.description}</p>
-              <p>{about.contact}</p>
-            </div>
-            <div className="right">
-              <img className="portrait" src={about.image} alt={about.header} />
-            </div>
-          </div>
-        ))}
-      </div>
+      <AboutMe />
     </div>
   );
 }
