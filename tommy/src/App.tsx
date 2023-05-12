@@ -1,7 +1,8 @@
 import React from "react";
 import headshot from "./images/headshot.png";
-import Header from "./components/header";
+import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
 import "./App.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
@@ -67,6 +68,7 @@ function App() {
         ))}
       </div>
       <AboutMe />
+      <Footer />
     </div>
   );
 }

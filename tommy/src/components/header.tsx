@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 import { animateScroll as scroll, scroller } from "react-scroll";
 
 function Header() {
