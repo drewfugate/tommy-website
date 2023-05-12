@@ -4,8 +4,18 @@ import Twitch from "../images/Twitch.png";
 import Twitter from "../images/Twitter.png";
 import Instagram from "../images/Instagram.png";
 import YouTube from "../images/YouTube.png";
+import { animateScroll as scroll, scroller } from "react-scroll";
 
 export default function Footer() {
+  const scrollToAbout = (props: string) => {
+    scroller.scrollTo(props, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -50,
+    });
+  };
+
   const goToURL = (props: string) => {
     window.open(props, "_blank");
   };
@@ -16,9 +26,11 @@ export default function Footer() {
         <p>Hutlet</p>
       </div>
       <div className="scrollButtons">
-        <p>HOME</p>
-        <p>DISCOGRAPHY</p>
-        <p>ABOUT</p>
+        <button onClick={() => scrollToAbout("Home")}>HOME</button>
+        <button onClick={() => scrollToAbout("Discography")}>
+          DISCOGRAPHY
+        </button>
+        <button onClick={() => scrollToAbout("About")}>ABOUT</button>
       </div>
       <div className="socialButtons">
         <img
