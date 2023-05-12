@@ -11,6 +11,11 @@ function Header() {
       offset: -50,
     });
   };
+
+  const goToURL = (props: string) => {
+    window.open(props, "_blank");
+  };
+
   return (
     <div className="header">
       <p>Hutlet</p>
@@ -20,7 +25,12 @@ function Header() {
           DISCOGRAPHY
         </button>
         <button onClick={() => scrollToAbout("about")}>ABOUT</button>
-        <button id="whiteButton">LISTEN NOW</button>
+        <button
+          onClick={() => goToURL("https://www.spotify.com")}
+          id="whiteButton"
+        >
+          LISTEN NOW
+        </button>
       </div>
     </div>
   );

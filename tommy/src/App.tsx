@@ -11,34 +11,43 @@ const albums = [
     date: "2023",
     description: "description of Ruby Bottles",
     image: require("./images/bottles.png"),
+    url: "https://spotify.com/ruby",
   },
   {
     title: "Emeralds and Jade",
     date: "2021",
     description: "description of Emeralds and Jade",
     image: require("./images/crystals.png"),
+    url: "https://spotify.com/emeralds",
   },
   {
     title: "Numb It",
     date: "2020",
     description: "description of Numb It",
     image: require("./images/whiskey.png"),
+    url: "https://spotify.com/whiskey",
   },
   {
     title: "The Marked",
     date: "2019",
     description: "description of The Marked",
     image: require("./images/hand.png"),
+    url: "https://spotify.com/marked",
   },
   {
     title: "An Introduction",
     date: "2019",
     description: "description of An Introduction",
     image: require("./images/kingfisher.png"),
+    url: "https://spotify.com/kingfisher",
   },
 ];
 
 function App() {
+  const goToURL = (props: string) => {
+    window.open(props, "_blank");
+  };
+
   return (
     <div id="Home" className="App">
       <Header />
@@ -49,7 +58,7 @@ function App() {
       </div>
       <div className="album-grid">
         {albums.map((album, index) => (
-          <div key={index} className="album">
+          <div key={index} className="album" onClick={() => goToURL(album.url)}>
             <img src={album.image} alt={album.title} />
             <h4>{album.title}</h4>
             <p>{album.date}</p>

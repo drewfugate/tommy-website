@@ -62,6 +62,15 @@
 .album img {
   width: 100%;
   height: auto;
+  opacity: .8;
+  filter: grayscale(30%);
+  filter: brightness(120%);
+}
+
+.album img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  filter: brightness(170%);
 }
 
 .about {
