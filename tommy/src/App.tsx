@@ -3,6 +3,7 @@ import headshot from "./images/headshot.png";
 import Header from "./components/header";
 import "./App.css";
 
+
 const albums = [
   {
     title: "Ruby Bottles",
