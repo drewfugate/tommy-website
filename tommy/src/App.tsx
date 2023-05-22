@@ -63,6 +63,7 @@ function App() {
       <div id="Discography" className="clickableBackground">
         <h4 className="disco">Discography</h4>
       </div>
+      <div className="above-discography"></div>
       <div className="album-grid">
         {albums.map((album, index) => (
           <div key={index} className="album" onClick={() => goToURL(album.url)}>
@@ -73,6 +74,7 @@ function App() {
           </div>
         ))}
       </div>
+      <div className="below-album"></div>
       <AboutMe />
       <Footer />
     </div>
