@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import "./App.css";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { animateScroll as scroll, scroller } from "react-scroll";
 
 const albums = [
@@ -53,7 +54,12 @@ function App() {
     <div id="Home" className="App">
       <Header />
       <header className="App-header"></header>
-      <img className="headshot" src={headshot} alt="headshot" />
+      <div className="portrait">
+        <img className="headshot" src={headshot} alt="headshot" />
+        <button onClick={() => goToURL("https://www.spotify.com")}>
+          CHECK OUT MY MUSIC HERE
+        </button>
+      </div>
       <div id="Discography" className="clickableBackground">
         <h4 className="disco">Discography</h4>
       </div>

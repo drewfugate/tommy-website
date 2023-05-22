@@ -1,5 +1,6 @@
 .App {
   background-color: black;
+  width: 100%;
 }
 .headshot {
   max-width: 100%;
@@ -60,11 +61,11 @@
 }
 
 .album img {
-  width: 100%;
   height: auto;
   opacity: .8;
   filter: grayscale(30%);
   filter: brightness(120%);
+  max-width: 100%;
 }
 
 .album img:hover {
@@ -103,4 +104,34 @@
 
 .about img {
   max-width: 100%;
+}
+
+.portrait {
+  position: relative;
+}
+
+.portrait button {
+  color: black;
+  border-radius: 9px;
+  border-color: white;
+  font-family: "Koulen";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #000000;
+  height: 25px;
+  width: 70px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 294px;
+  height: 51px;
+  opacity: .8;
+}
+
+.portrait button:hover{
+  opacity: 1;
 }
