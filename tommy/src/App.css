@@ -90,7 +90,6 @@
   align-items: center;
   background: #1b1b1b;
 }
-
 .left {
   width: 45%;
   padding-left: 50px;
@@ -103,7 +102,7 @@
 }
 
 .about img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .portrait {
